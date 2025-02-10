@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Web App - Cloudflare WAF Testing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mock Web App for Cloudflare WAF Testing</h1>
+    <p>Use the form below to test SQL Injection, XSS, and other attack vectors.</p>
+    
+    <form action="/submit" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password">
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    
+    <p>Test URL parameters by adding <code>?test=<script>alert('XSS')</script></code> in the browser bar.</p>
+</body>
+</html>
